@@ -10,11 +10,11 @@ jobs:
 
     
     env:
-        first: 12
+        FIRST: 12
     steps:
     - name: test1
       run: echo hoge
-      if: ${{ $first == 12 }}
+      if: ${{ env.FIRST == 12 }}
 
     - name: test2
       run: echo hoge
