@@ -1,0 +1,19 @@
+name: conditions
+on:
+  push: 
+    branches: [main]
+    
+jobs:
+   condition:
+    runs-on: ubuntu-latest
+    
+    
+    env:
+      NAME: Surya
+    steps:
+    - name: First condition
+      if: ${{ 12!=12 }}
+      echo "Yes! 12 is !equal to 12"
+      elseif: ${{ 12==12 }}
+      echo "Done"
+    
