@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Failing step
-      run: exit 1
+      run: echo "Hello, World!"
+    
     - name: Login to Jira
       uses: atlassian/gajira-login@master
       if: failure()
@@ -21,7 +22,8 @@ jobs:
       with:
         project: DMAC
         issuetype: Bug
-        summary: Build failed for ${{ github.repository }}
+        summary: Congratulations! ${{ github.workflow }} failed in ${{ github.repository }}
+        
     - name: Notify Teams
       # You may pin to the exact commit or the version.
       # uses: thechetantalwar/teams-notify@8a78811f5e8f58cdd204efebd79158006428c46b
@@ -31,5 +33,4 @@ jobs:
         # WebHook URL of your MS Teams Channel
         teams_webhook_url: ${{ secrets.TEAMS_WEBHOOK }}
         # Message to be sent
-        message: Congratulations! Error found :)
-        
+        message: Congratulations! ${{github.workflow}} workflow failed successfully in ${{ github.repository }}
