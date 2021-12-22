@@ -26,6 +26,7 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: thechetantalwar/teams-notify@8a78811f5e8f58cdd204efebd79158006428c46b
       uses: thechetantalwar/teams-notify@v2
+      if: failure()
       with:
         # WebHook URL of your MS Teams Channel
         teams_webhook_url: https://lntcon.webhook.office.com/webhookb2/e71a30ee-04bf-4f4f-ad14-b36b66791252@264b9899-fe1b-430b-9509-2154878d5774/IncomingWebhook/5fb9c7421c0b4dcc9514ebc39beea13e/9c385632-7bf9-41ac-9e75-fe5f3d846ec2
