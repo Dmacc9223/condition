@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: test1
       run: echo hoge
-      if: ( 'a' == 'a' )
+      if: ( 'a' == 'b' )
 
     - name: test2
       run: echo hoge
