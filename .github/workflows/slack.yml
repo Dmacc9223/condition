@@ -20,5 +20,5 @@ jobs:
       if: failure()
       with:
         project: DMAC
-        issuetype: Build
+        issuetype: DONE
         summary: Build failed for ${{ github.repository }}
