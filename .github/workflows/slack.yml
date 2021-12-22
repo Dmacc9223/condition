@@ -1,3 +1,7 @@
+name: conditions
+on:
+  push: 
+    branches: [workflow]
 jobs:
   a-failing-job:
     runs-on: ubuntu-latest
