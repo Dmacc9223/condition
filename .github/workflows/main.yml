@@ -8,10 +8,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    
+    env:
+        first: 12
     steps:
     - name: test1
       run: echo hoge
-      if: ( 'a' == 'b' )
+      if: ( first == 12 )
 
     - name: test2
       run: echo hoge
